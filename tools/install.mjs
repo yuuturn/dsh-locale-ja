@@ -108,14 +108,15 @@ if (uninstall) {
     await report(`remove the ${entryId} row from ${patchPath}`, async () => {
       const lines = patch.split('\n')
       const start = lines.findIndex((line) => line.trim() === marker)
-      let end = start + 1
+      if (start < 0) return
+      // The managed block is the marker plus its `- insert:` entry: skip the
+      // block's own first line before scanning for the next entry.
+      let end = Math.min(start + 2, lines.length)
       while (end < lines.length && !/^- /.test(lines[end])) end += 1
-      // Drop the trailing blank line the managed block introduced.
       lines.splice(start, end - start)
-      while (start < lines.length && start > 0 && lines[start].trim() === '' && lines[start - 1].trim() === '') {
-        lines.splice(start, 1)
-      }
-      await writeFile(patchPath, lines.join('\n'))
+      // Drop the blank line(s) the block introduced, then keep one final newline.
+      while (lines.length > 0 && lines[lines.length - 1].trim() === '') lines.pop()
+      await writeFile(patchPath, lines.length === 0 ? '' : `${lines.join('\n')}\n`)
     })
   } else {
     console.log(`skip: no managed row in ${patchPath}`)

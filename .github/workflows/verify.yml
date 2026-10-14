@@ -24,6 +24,11 @@ jobs:
       - name: Dictionaries and bundle contract
         run: node tools/verify.mjs
 
+      # Installs into a throwaway profile in the OS temp directory and checks
+      # the link, the Loader row, idempotence and uninstall.
+      - name: Profile installer round trip
+        run: node tools/test-install.mjs
+
       # Loads the real locale service from an installed DSH app; without one
       # (the case on CI) the check reports a skip.
       - name: Integration against the shipped locale service

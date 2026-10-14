@@ -103,7 +103,7 @@ npm run build               # regenerate lib/client.js
 ```sh
 npm run build     # generate lib/client.js from locale/ja/*.json and font.css
 npm run verify    # key sets, placeholders, style rules, bundle contract
-npm test          # build --check + verify + integration against the real app
+npm test          # build --check + verify + installer round trip + integration against the real app
 ```
 
 The integration test loads the **real locale service** out of an installed DSH `app.asar` and asserts that 日本語 is selectable, that operating the Language row switches the locale, and that `<html lang>` and the font override take effect. Without a DSH installation it reports a skip (`DSH_APP_ASAR` overrides the path). CI runs `build --check` and `verify`.

@@ -34,7 +34,7 @@
   "scripts": {
     "build": "node tools/build.mjs",
     "verify": "node tools/verify.mjs",
-    "test": "node tools/build.mjs --check && node tools/verify.mjs && node tools/test-locale-runtime.mjs",
+    "test": "node tools/build.mjs --check && node tools/verify.mjs && node tools/test-install.mjs && node tools/test-locale-runtime.mjs",
     "install:profile": "node tools/install.mjs",
     "uninstall:profile": "node tools/install.mjs --uninstall",
     "refresh-reference": "python3 tools/extract-dicts.py \"${DSH_APP_ASAR:-/Applications/DeepSeek Harness.app/Contents/Resources/app.asar}\" reference/en"

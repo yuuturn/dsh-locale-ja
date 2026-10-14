@@ -103,7 +103,7 @@ npm run build               # lib/client.js を再生成
 ```sh
 npm run build     # locale/ja/*.json + font.css から lib/client.js を生成
 npm run verify    # キー集合・プレースホルダ・スタイル・バンドル契約を検証
-npm test          # build --check + verify + 実アプリに対する結合テスト
+npm test          # build --check + verify + インストーラの往復 + 実アプリに対する結合テスト
 ```
 
 `npm test` の結合テストは、インストール済み DSH の `app.asar` から**本物のロケールサービス**を読み込み、「日本語」が選択肢に出ること、行の操作で実際に切り替わること、`<html lang>` とフォント上書きが有効になることを確認します。DSH が無い環境では自動的に skip します（`DSH_APP_ASAR` で場所を指定できます）。
