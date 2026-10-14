@@ -1,0 +1,18 @@
+{
+  "delete.action": "削除",
+  "delete.label": "リマインダーを削除：{title}",
+  "delete.pending": "削除中…",
+  "frequency.every": "{value}{unit}ごと",
+  "frequency.once": "1回のみ",
+  "hover.more": "他{count}件",
+  "list.aria": "有効なリマインダー",
+  "list.error": "リマインダーを読み込めませんでした",
+  "list.loading": "リマインダーを読み込み中…",
+  "list.nextRun": "次回実行",
+  "list.open": "リマインダー詳細を開く：{title}",
+  "list.retry": "再試行",
+  "mark.aria": "スケジュール済みタスク{count}件",
+  "trigger.label": "リマインダー",
+  "trigger.one": "リマインダー{count}件",
+  "trigger.other": "リマインダー{count}件"
+}

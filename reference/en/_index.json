@@ -1,0 +1,344 @@
+[
+ {
+  "namespace": "agent-team",
+  "en": 25,
+  "zh": 25,
+  "file": "agent-team.json"
+ },
+ {
+  "namespace": "approval",
+  "en": 5,
+  "zh": 5,
+  "file": "approval.json"
+ },
+ {
+  "namespace": "chat",
+  "en": 186,
+  "zh": 186,
+  "file": "chat.json"
+ },
+ {
+  "namespace": "command",
+  "en": 28,
+  "zh": 28,
+  "file": "command.json"
+ },
+ {
+  "namespace": "common",
+  "en": 41,
+  "zh": 41,
+  "file": "common.json"
+ },
+ {
+  "namespace": "conversation",
+  "en": 369,
+  "zh": 369,
+  "file": "conversation.json"
+ },
+ {
+  "namespace": "cordis",
+  "en": 51,
+  "zh": 51,
+  "file": "cordis.json"
+ },
+ {
+  "namespace": "deliverables",
+  "en": 60,
+  "zh": 60,
+  "file": "deliverables.json"
+ },
+ {
+  "namespace": "documentHtml",
+  "en": 4,
+  "zh": 4,
+  "file": "documentHtml.json"
+ },
+ {
+  "namespace": "documentMarkdown",
+  "en": 4,
+  "zh": 4,
+  "file": "documentMarkdown.json"
+ },
+ {
+  "namespace": "feedback",
+  "en": 20,
+  "zh": 20,
+  "file": "feedback.json"
+ },
+ {
+  "namespace": "goal",
+  "en": 12,
+  "zh": 12,
+  "file": "goal.json"
+ },
+ {
+  "namespace": "job",
+  "en": 39,
+  "zh": 39,
+  "file": "job.json"
+ },
+ {
+  "namespace": "model",
+  "en": 23,
+  "zh": 23,
+  "file": "model.json"
+ },
+ {
+  "namespace": "open-in-app",
+  "en": 15,
+  "zh": 15,
+  "file": "open-in-app.json"
+ },
+ {
+  "namespace": "permission.access",
+  "en": 17,
+  "zh": 17,
+  "file": "permission.access.json"
+ },
+ {
+  "namespace": "plan",
+  "en": 17,
+  "zh": 17,
+  "file": "plan.json"
+ },
+ {
+  "namespace": "pluginManager",
+  "en": 189,
+  "zh": 189,
+  "file": "pluginManager.json"
+ },
+ {
+  "namespace": "question",
+  "en": 31,
+  "zh": 31,
+  "file": "question.json"
+ },
+ {
+  "namespace": "reference",
+  "en": 11,
+  "zh": 11,
+  "file": "reference.json"
+ },
+ {
+  "namespace": "schedule.catalog",
+  "en": 16,
+  "zh": 16,
+  "file": "schedule.catalog.json"
+ },
+ {
+  "namespace": "schedule.manager",
+  "en": 133,
+  "zh": 133,
+  "file": "schedule.manager.json"
+ },
+ {
+  "namespace": "session-log-download",
+  "en": 10,
+  "zh": 10,
+  "file": "session-log-download.json"
+ },
+ {
+  "namespace": "settings",
+  "en": 34,
+  "zh": 34,
+  "file": "settings.json"
+ },
+ {
+  "namespace": "settings.account",
+  "en": 93,
+  "zh": 54,
+  "file": "settings.account.json"
+ },
+ {
+  "namespace": "settings.agentLoop",
+  "en": 12,
+  "zh": 12,
+  "file": "settings.agentLoop.json"
+ },
+ {
+  "namespace": "settings.agentPreset",
+  "en": 22,
+  "zh": 22,
+  "file": "settings.agentPreset.json"
+ },
+ {
+  "namespace": "settings.locale",
+  "en": 1,
+  "zh": 1,
+  "file": "settings.locale.json"
+ },
+ {
+  "namespace": "settings.models",
+  "en": 113,
+  "zh": 113,
+  "file": "settings.models.json"
+ },
+ {
+  "namespace": "settings.permission",
+  "en": 12,
+  "zh": 12,
+  "file": "settings.permission.json"
+ },
+ {
+  "namespace": "settings.pluginInventory",
+  "en": 40,
+  "zh": 40,
+  "file": "settings.pluginInventory.json"
+ },
+ {
+  "namespace": "settings.plugins",
+  "en": 5,
+  "zh": 5,
+  "file": "settings.plugins.json"
+ },
+ {
+  "namespace": "settings.sessionLog",
+  "en": 4,
+  "zh": 4,
+  "file": "settings.sessionLog.json"
+ },
+ {
+  "namespace": "settings.shell",
+  "en": 14,
+  "zh": 14,
+  "file": "settings.shell.json"
+ },
+ {
+  "namespace": "settings.subagent",
+  "en": 35,
+  "zh": 35,
+  "file": "settings.subagent.json"
+ },
+ {
+  "namespace": "settings.theme",
+  "en": 9,
+  "zh": 9,
+  "file": "settings.theme.json"
+ },
+ {
+  "namespace": "settings.webSearch",
+  "en": 18,
+  "zh": 18,
+  "file": "settings.webSearch.json"
+ },
+ {
+  "namespace": "shortcuts",
+  "en": 56,
+  "zh": 56,
+  "file": "shortcuts.json"
+ },
+ {
+  "namespace": "shortcuts.layout",
+  "en": 1,
+  "zh": 1,
+  "file": "shortcuts.layout.json"
+ },
+ {
+  "namespace": "sidebar",
+  "en": 5,
+  "zh": 5,
+  "file": "sidebar.json"
+ },
+ {
+  "namespace": "sidebarBrowser",
+  "en": 26,
+  "zh": 26,
+  "file": "sidebarBrowser.json"
+ },
+ {
+  "namespace": "sidebarCodePreview",
+  "en": 3,
+  "zh": 3,
+  "file": "sidebarCodePreview.json"
+ },
+ {
+  "namespace": "sidebarDocumentPreview",
+  "en": 22,
+  "zh": 22,
+  "file": "sidebarDocumentPreview.json"
+ },
+ {
+  "namespace": "sidebarExcel",
+  "en": 15,
+  "zh": 15,
+  "file": "sidebarExcel.json"
+ },
+ {
+  "namespace": "sidebarFiles",
+  "en": 17,
+  "zh": 17,
+  "file": "sidebarFiles.json"
+ },
+ {
+  "namespace": "sidebarImage",
+  "en": 5,
+  "zh": 5,
+  "file": "sidebarImage.json"
+ },
+ {
+  "namespace": "sidebarOffice",
+  "en": 15,
+  "zh": 15,
+  "file": "sidebarOffice.json"
+ },
+ {
+  "namespace": "sidebarPdf",
+  "en": 9,
+  "zh": 9,
+  "file": "sidebarPdf.json"
+ },
+ {
+  "namespace": "sidebarRight",
+  "en": 34,
+  "zh": 34,
+  "file": "sidebarRight.json"
+ },
+ {
+  "namespace": "sidebarTerminal",
+  "en": 28,
+  "zh": 28,
+  "file": "sidebarTerminal.json"
+ },
+ {
+  "namespace": "skill",
+  "en": 8,
+  "zh": 8,
+  "file": "skill.json"
+ },
+ {
+  "namespace": "slash.menu",
+  "en": 9,
+  "zh": 9,
+  "file": "slash.menu.json"
+ },
+ {
+  "namespace": "subagent",
+  "en": 39,
+  "zh": 39,
+  "file": "subagent.json"
+ },
+ {
+  "namespace": "trajectory",
+  "en": 192,
+  "zh": 192,
+  "file": "trajectory.json"
+ },
+ {
+  "namespace": "voice-input",
+  "en": 101,
+  "zh": 101,
+  "file": "voice-input.json"
+ },
+ {
+  "namespace": "workflowRun",
+  "en": 18,
+  "zh": 18,
+  "file": "workflowRun.json"
+ },
+ {
+  "namespace": "workspace",
+  "en": 112,
+  "zh": 112,
+  "file": "workspace.json"
+ }
+]

@@ -1,0 +1,10 @@
+{
+  "menu.userOnly": "ユーザーのみ",
+  "row.failed": "スキルの読み込みに失敗しました",
+  "row.inspect": "詳細を表示",
+  "row.instructions": "手順",
+  "row.preparing": "スキルの読み込みを準備中",
+  "row.running": "スキルを読み込み中",
+  "row.stopped": "スキルの読み込みを停止しました",
+  "row.title": "スキル"
+}

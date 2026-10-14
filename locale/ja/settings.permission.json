@@ -1,0 +1,14 @@
+{
+  "confirm.acknowledge": "リスクを理解した上で続行します",
+  "confirm.cancel": "キャンセル",
+  "confirm.description": "完全アクセスを有効にすると、新しいセッションでは確認ステップが減り、機密操作やファイルの変更、外部コマンドなど、より多くの操作を直接実行できるようになります。後続のタスクを信頼できる場合にのみ使用してください",
+  "confirm.enable": "完全アクセスを有効にする",
+  "confirm.title": "完全アクセスを有効にしますか",
+  "description": "新しいセッションのデフォルト権限モードを選択",
+  "loading": "読み込み中",
+  "preset.fullAccess": "完全アクセス",
+  "preset.readOnly": "読み取り専用",
+  "preset.workspaceWrite": "ワークスペース書き込み",
+  "title": "権限",
+  "unavailable": "利用不可"
+}

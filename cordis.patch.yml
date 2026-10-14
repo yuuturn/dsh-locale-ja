@@ -1,0 +1,11 @@
+# dsh-locale-ja bundle patch.
+#
+# Applied when this package is listed in the profile's package.json
+# `dsh.profile.bundles` (the path the in-app Plugins page and `pnpm add` use).
+# It composes the language pack over the profile root.
+#
+# A profile that instead uses `node tools/install.mjs` gets the same row written
+# into its own cordis.patch.yml; use one route or the other, not both.
+- insert:
+    - id: locale-ja
+      name: dsh-locale-ja

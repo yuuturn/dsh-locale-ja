@@ -1,0 +1,76 @@
+{
+  "note": "Translation groups for the ja language pack. Every namespace extracted from DSH 0.2.0-rc.2 belongs to exactly one group; tools/check-coverage.mjs verifies that.",
+  "groups": [
+    {
+      "id": "settings-core",
+      "namespaces": [
+        "settings",
+        "settings.locale",
+        "settings.shell",
+        "settings.theme",
+        "settings.plugins",
+        "settings.sessionLog",
+        "settings.pluginInventory",
+        "settings.permission",
+        "settings.agentLoop",
+        "settings.agentPreset",
+        "settings.subagent",
+        "settings.webSearch"
+      ]
+    },
+    {
+      "id": "settings-detail",
+      "namespaces": ["settings.models", "settings.account", "pluginManager"]
+    },
+    {
+      "id": "transcript",
+      "namespaces": ["conversation"]
+    },
+    {
+      "id": "composer",
+      "namespaces": ["chat", "question", "approval", "feedback", "slash.menu", "command", "skill"]
+    },
+    {
+      "id": "browser",
+      "namespaces": [
+        "workspace",
+        "deliverables",
+        "sidebarRight",
+        "sidebarTerminal",
+        "sidebarBrowser",
+        "sidebarDocumentPreview",
+        "sidebarFiles",
+        "sidebarExcel",
+        "sidebarOffice",
+        "sidebarPdf",
+        "sidebarImage",
+        "sidebarCodePreview",
+        "sidebar",
+        "open-in-app",
+        "documentHtml",
+        "documentMarkdown",
+        "reference"
+      ]
+    },
+    {
+      "id": "agent",
+      "namespaces": ["trajectory", "subagent", "workflowRun", "job", "plan", "goal", "model", "agent-team", "cordis"]
+    },
+    {
+      "id": "misc",
+      "namespaces": [
+        "schedule.manager",
+        "schedule.catalog",
+        "shortcuts",
+        "shortcuts.layout",
+        "voice-input",
+        "session-log-download",
+        "permission.access"
+      ]
+    },
+    {
+      "id": "shared",
+      "namespaces": ["common"]
+    }
+  ]
+}

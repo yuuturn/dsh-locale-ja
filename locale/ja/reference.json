@@ -1,0 +1,13 @@
+{
+  "candidate.noCwd": "(cwdなし)",
+  "crumb.root": "ワークスペース",
+  "section.files": "ファイルとフォルダー",
+  "section.sessions": "セッション",
+  "section.subagents": "サブエージェント",
+  "time.days": "{n}日",
+  "time.hours": "{n}時間",
+  "time.minutes": "{n}分",
+  "time.months": "{n}か月",
+  "time.now": "現在",
+  "time.years": "{n}年"
+}

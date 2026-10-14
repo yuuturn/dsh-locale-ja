@@ -1,0 +1,38 @@
+{
+ "en": {
+  "delete.action": "Delete",
+  "delete.label": "Delete reminder: {title}",
+  "delete.pending": "Deleting…",
+  "frequency.every": "Every {value} {unit}",
+  "frequency.once": "Once",
+  "hover.more": "{count} more",
+  "list.aria": "Active reminders",
+  "list.error": "Could not load reminders.",
+  "list.loading": "Loading reminders…",
+  "list.nextRun": "Next run",
+  "list.open": "Open reminder details: {title}",
+  "list.retry": "Retry",
+  "mark.aria": "{count} scheduled tasks",
+  "trigger.label": "Reminders",
+  "trigger.one": "{count} reminder",
+  "trigger.other": "{count} reminders"
+ },
+ "zh": {
+  "delete.action": "删除",
+  "delete.label": "删除提醒：{title}",
+  "delete.pending": "正在删除…",
+  "frequency.every": "{value}{unit}一次",
+  "frequency.once": "单次",
+  "hover.more": "另有 {count} 个任务",
+  "list.aria": "活动提醒",
+  "list.error": "无法加载提醒。",
+  "list.loading": "正在加载提醒…",
+  "list.nextRun": "下次运行",
+  "list.open": "打开提醒详情：{title}",
+  "list.retry": "重试",
+  "mark.aria": "{count} 个自动化任务",
+  "trigger.label": "提醒",
+  "trigger.one": "{count} 个提醒",
+  "trigger.other": "{count} 个提醒"
+ }
+}

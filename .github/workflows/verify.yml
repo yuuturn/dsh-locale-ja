@@ -1,0 +1,30 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # `lib/client.js` is committed (git and npm installs consume it directly),
+      # so CI checks that it still matches locale/ja/*.json and font.css.
+      - name: Built bundle is up to date
+        run: node tools/build.mjs --check
+
+      # Key parity against the committed reference dictionaries, placeholder
+      # parity, style rules, and the bundle's registration behavior.
+      - name: Dictionaries and bundle contract
+        run: node tools/verify.mjs
+
+      # Loads the real locale service from an installed DSH app; without one
+      # (the case on CI) the check reports a skip.
+      - name: Integration against the shipped locale service
+        run: node tools/test-locale-runtime.mjs

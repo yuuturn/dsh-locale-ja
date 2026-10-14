@@ -1,0 +1,16 @@
+{
+ "en": {
+  "failed": "This image could not be displayed.",
+  "loading": "Rendering document...",
+  "preview": "Image preview: {name}",
+  "title": "Image",
+  "unsupported": "Image preview requires the complete file contents."
+ },
+ "zh": {
+  "failed": "无法显示这张图片",
+  "loading": "文档渲染中...",
+  "preview": "图片预览：{name}",
+  "title": "图片",
+  "unsupported": "图片预览需要完整文件内容"
+ }
+}

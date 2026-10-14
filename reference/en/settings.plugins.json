@@ -1,0 +1,16 @@
+{
+ "en": {
+  "empty": "This deployment exposes no plugin views.",
+  "intro": "Inspect the plugins this deployment ships.",
+  "nav": "Built-in plugins",
+  "tabs": "Plugin views",
+  "title": "Built-in plugins"
+ },
+ "zh": {
+  "empty": "本部署没有开放任何插件视图。",
+  "intro": "查看内置部署的插件列表",
+  "nav": "内置插件",
+  "tabs": "插件视图",
+  "title": "内置插件"
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "en": {
+  "chip.exitFailed": "Failed to exit plan mode",
+  "chip.label": "Plan",
+  "chip.on.aria": "Plan mode on, press to turn off",
+  "chip.on.title": "Plan mode on — click to turn off (/plan off)",
+  "preview.action": "Open",
+  "preview.document": "Plan · Markdown",
+  "preview.expired": "This temporary plan preview has expired. Reopen it from the pending review card.",
+  "preview.failed": "Could not load plan",
+  "preview.full": "View full plan",
+  "preview.historyUnavailable": "Session history is unavailable",
+  "preview.invalidAddress": "Invalid plan address",
+  "preview.loading": "Loading plan…",
+  "preview.notFound": "This plan was not found",
+  "preview.open": "Open plan in sidebar",
+  "preview.openNamed": "Open plan: {title}",
+  "preview.title": "Plan",
+  "preview.unavailable": "Plan preview is unavailable"
+ },
+ "zh": {
+  "chip.exitFailed": "退出计划模式失败",
+  "chip.label": "计划",
+  "chip.on.aria": "计划模式已开启，按下关闭",
+  "chip.on.title": "计划模式已开启 — 点击关闭（/plan off）",
+  "preview.action": "打开",
+  "preview.document": "计划 · Markdown",
+  "preview.expired": "临时计划预览已失效，请从仍在等待审批的卡片重新打开。",
+  "preview.failed": "无法读取计划",
+  "preview.full": "查看全文",
+  "preview.historyUnavailable": "无法读取会话历史",
+  "preview.invalidAddress": "计划地址无效",
+  "preview.loading": "正在读取计划…",
+  "preview.notFound": "未找到这份计划",
+  "preview.open": "在侧边栏打开计划",
+  "preview.openNamed": "打开计划：{title}",
+  "preview.title": "计划",
+  "preview.unavailable": "计划预览不可用"
+ }
+}

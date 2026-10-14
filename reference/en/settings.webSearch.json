@@ -1,0 +1,42 @@
+{
+ "en": {
+  "apiKey": "API key",
+  "apiKeyHint": "Stored outside the settings file. Leave blank to keep the current key.",
+  "apiKeySet": "A key is configured.",
+  "apiKeyUnset": "No key is configured; only conversations using a DeepSeek Account model can search, through the default endpoint.",
+  "baseUrl": "Endpoint",
+  "baseUrlHint": "Leave blank to use the provider default.",
+  "description": "Set up the DeepSeek search provider.",
+  "invalidNumber": "Enter a number, or leave blank to use the default.",
+  "maxUses": "Max searches per request",
+  "maxUsesHint": "How many times one request may search before it must answer.",
+  "overridden": "Overridden",
+  "readOnly": "This deployment stores settings read-only.",
+  "reset": "Reset to default",
+  "save": "Save",
+  "saveFailed": "The deployment did not accept these values; they were left for you to correct.",
+  "saving": "Saving…",
+  "title": "Web search",
+  "unavailable": "This plugin is not loaded, so it cannot be configured right now."
+ },
+ "zh": {
+  "apiKey": "API Key",
+  "apiKeyHint": "不写入设置文件。留空表示保持当前密钥。",
+  "apiKeySet": "已配置密钥。",
+  "apiKeyUnset": "未配置密钥；仅使用 DeepSeek 账号模型的对话可以通过默认接口地址搜索。",
+  "baseUrl": "接口地址",
+  "baseUrlHint": "留空则使用提供方默认地址。",
+  "description": "设置 DeepSeek 的搜索提供方。",
+  "invalidNumber": "请填数字；留空表示使用默认值。",
+  "maxUses": "单次请求最多搜索次数",
+  "maxUsesHint": "一次请求在必须作答前最多可以搜索多少次。",
+  "overridden": "已覆盖",
+  "readOnly": "本部署的设置为只读。",
+  "reset": "恢复默认",
+  "save": "保存",
+  "saveFailed": "本部署没有接受这些值，已保留供你修改。",
+  "saving": "保存中…",
+  "title": "网页搜索",
+  "unavailable": "该插件当前未加载，暂时无法配置。"
+ }
+}

@@ -1,0 +1,30 @@
+# Third-party notices
+
+## DeepSeek Harness (DSH) — MIT
+
+The English source strings this package translates, and the key names it
+targets, come from the DSH web client packages published by DeepSeek:
+
+- `@deepseek-ai/dsh-client-*` (MIT), and the DSH application bundle that ships them
+- Upstream repository: <https://github.com/deepseek-ai/deepseek-harness>
+- Copyright (c) DeepSeek
+
+`reference/en/*.json` is a snapshot of those packages' `en` dictionaries,
+extracted from an installed DSH `0.2.0-rc.2` with `tools/extract-dicts.py`. It is
+committed only so that contributors can diff translations and run
+`tools/verify.mjs` without a DSH installation. No DSH source code is copied; only
+the locale key names and their English values, which this package must match.
+
+## Noto Sans JP — SIL Open Font License 1.1
+
+This package does **not** redistribute the Noto Sans JP font. `locale/ja/font.css`
+only names it in a `font-family` stack, so the font is used if the reader has
+installed it (for example `brew install --cask font-noto-sans-jp`, or from
+<https://fonts.google.com/noto/specimen/Noto+Sans+JP>). Without it, the stack
+falls back to the Japanese system fonts already present (Hiragino Sans on macOS,
+Yu Gothic UI / Meiryo on Windows).
+
+- Font: Noto Sans JP, Copyright (c) 2014-2021 Adobe (<http://www.adobe.com/>),
+  with Reserved Font Name 'Source'.
+- License: SIL Open Font License 1.1
+  (<https://scripts.sil.org/OFL>), the same terms the Homebrew cask installs under.

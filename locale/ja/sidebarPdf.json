@@ -1,0 +1,11 @@
+{
+  "failed": "PDFを表示できません：{message}",
+  "loading": "ドキュメントをレンダリング中…",
+  "pageImage": "PDF {page}ページ",
+  "password": "このPDFはパスワードが必要ですが、パスワード保護されたPDFのプレビューには対応していません",
+  "rendering": "ページをレンダリング中…",
+  "retry": "再試行",
+  "title": "PDF",
+  "unsupported": "PDFのプレビューにはファイル全体の内容が必要です",
+  "workerFailed": "PDFのレンダリング処理を続行できませんでした。再試行してください"
+}

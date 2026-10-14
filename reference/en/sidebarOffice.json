@@ -1,0 +1,36 @@
+{
+ "en": {
+  "busy": "Office preview is busy. Try again shortly.",
+  "changed": "The file changed while being read. Reopen the preview.",
+  "closeDetails": "Close font details",
+  "failed": "Office conversion did not produce a usable PDF. Check the file and try again.",
+  "invalid": "This Office file cannot be previewed. It may be damaged, password protected, or have the wrong extension.",
+  "loading": "Rendering document...",
+  "missingFontsCount": "Fonts: {count}",
+  "missingFontsDescription": "These fonts are unavailable for this preview. Text and layout may differ from the original document.",
+  "missingFontsTitle": "Missing fonts",
+  "retry": "Retry",
+  "timeout": "Office conversion timed out. Try again.",
+  "title": "Office document",
+  "tooLarge": "The Office file or converted PDF exceeds the preview size limit. Reduce the file size or adjust the preview configuration.",
+  "unavailable": "Office previews are unavailable. Enable the document preview service on the computer running DeepSeek Harness.",
+  "viewMissingFonts": "Missing fonts: {count}. Click to view."
+ },
+ "zh": {
+  "busy": "Office 预览任务较多，请稍后重试。",
+  "changed": "文件在读取时已更改，请重新打开预览。",
+  "closeDetails": "关闭字体详情",
+  "failed": "Office 转换失败，未生成可用的 PDF。请检查该文件后重试。",
+  "invalid": "无法预览此 Office 文件。文件可能已损坏、受密码保护，或与扩展名不符。",
+  "loading": "文档渲染中...",
+  "missingFontsCount": "{count} 种字体",
+  "missingFontsDescription": "本次预览无法使用以下字体，预览中的文字和排版可能与原文档不同。",
+  "missingFontsTitle": "缺失的字体",
+  "retry": "重试",
+  "timeout": "Office 转换超时，请重试。",
+  "title": "Office 文档",
+  "tooLarge": "Office 文件或转换后的 PDF 超过预览大小上限，请缩小文件或调整预览配置。",
+  "unavailable": "Office 预览不可用。请在运行 DeepSeek Harness 的主机上启用文档预览服务。",
+  "viewMissingFonts": "缺失 {count} 种字体，点击查看"
+ }
+}

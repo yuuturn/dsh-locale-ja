@@ -1,0 +1,68 @@
+{
+  "name": "dsh-locale-ja",
+  "version": "0.1.0",
+  "description": "Japanese (ja) UI locale and font pack for the DSH (DeepSeek Harness) web GUI",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "locale/ja",
+    "locale/STYLE.md",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "NOTICE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": ["@deepseek-ai/dsh-client-locale"],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "verify": "node tools/verify.mjs",
+    "test": "node tools/build.mjs --check && node tools/verify.mjs && node tools/test-locale-runtime.mjs",
+    "install:profile": "node tools/install.mjs",
+    "uninstall:profile": "node tools/install.mjs --uninstall",
+    "refresh-reference": "python3 tools/extract-dicts.py \"${DSH_APP_ASAR:-/Applications/DeepSeek Harness.app/Contents/Resources/app.asar}\" reference/en"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "locale",
+    "i18n",
+    "japanese",
+    "ja",
+    "noto-sans-jp",
+    "client-plugin"
+  ],
+  "license": "MIT",
+  "author": "yuta fujii <mail@yfujii.net> (https://github.com/yuuturn)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuuturn/dsh-locale-ja.git"
+  },
+  "homepage": "https://github.com/yuuturn/dsh-locale-ja#readme",
+  "bugs": {
+    "url": "https://github.com/yuuturn/dsh-locale-ja/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
