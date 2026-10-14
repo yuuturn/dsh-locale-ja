@@ -56,7 +56,16 @@ node tools/install.mjs --uninstall
 
 ### Alternative: install it as a bundle
 
-The package also declares a DSH bundle (`dsh.bundle.patch`), so adding it as a profile dependency and listing `dsh-locale-ja` in `dsh.profile.bundles` composes the same row (this is the route used by `dsh plugin --profile <name> add …` and the in-app Plugins page). When `tools/install.mjs` sees the package installed as a dependency, it leaves the profile patch alone so the row is not composed twice.
+The package also declares a DSH bundle (`dsh.bundle.patch`), so installing it as a pnpm dependency and listing it in `dsh.profile.bundles` composes the same row.
+
+```sh
+dsh plugin --profile web add "git+https://github.com/yuuturn/dsh-locale-ja"
+# then add "dsh-locale-ja" to dsh.profile.bundles in the profile's package.json
+```
+
+When `tools/install.mjs` sees the package installed as a dependency, it leaves the profile patch alone so the row is not composed twice.
+
+> **This package is not published to npm.** The `dsh-locale-ja` entry on the npm registry belongs to a different project (by gepeiyu) and is unrelated to this repository; `npm install dsh-locale-ja` will not install this pack.
 
 ## The Japanese font
 
@@ -109,6 +118,20 @@ npm test          # build --check + verify + installer round trip + integration 
 The integration test loads the **real locale service** out of an installed DSH `app.asar` and asserts that 日本語 is selectable, that operating the Language row switches the locale, and that `<html lang>` and the font override take effect. Without a DSH installation it reports a skip (`DSH_APP_ASAR` overrides the path). CI runs `build --check` and `verify`.
 
 Translation work is split across `tools/translate-groups.json`; `tools/extract-dicts.py` performs the extraction. Pull requests are welcome — if the upstream English changed, please include the `npm run refresh-reference` result.
+
+## How this relates to the other Japanese packs
+
+Other implementations of the same idea (a Japanese UI for the DSH web GUI) are published. They all use the same mechanism — the official `ctx.locale.addLanguage()` plus per-namespace dictionaries — and differ in the DSH release they were translated from, their coverage, how they handle fonts, and how they are installed.
+
+| | This repository | [fang2hou/dsh-locale-ja](https://github.com/fang2hou/dsh-locale-ja) | [gepeiyu/dsh-locale-ja](https://github.com/gepeiyu/dsh-locale-ja) |
+| --- | --- | --- | --- |
+| Translated from | DSH `0.2.0-rc.2` | DSH `0.1.5-rc.2` | DSH `0.2.1-alpha.2` |
+| Coverage | 57 namespaces / 2,433 keys | 42 / 1,257 | 62 / 2,773 |
+| Japanese font | Prefers Noto Sans JP, falls back to OS Japanese fonts | OS Japanese system fonts | Not mentioned |
+| Desktop app | Supported (`tools/install.mjs`) | Not documented (CLI `--profile web`) | Not documented (same) |
+| Distribution | GitHub (not on npm) | npm `@fang2hou/dsh-locale-ja` | npm `dsh-locale-ja` |
+
+What sets this repository apart: it covers **every namespace shipped with the DSH release you are running (`0.2.0-rc.2`)**, it can **install into the desktop app's profile**, it **names Noto Sans JP explicitly**, and it runs an **integration test against the real locale service in CI**. If another pack beats it on coverage or update cadence, prefer that one, or send the difference upstream rather than running both.
 
 ## Known limitations
 

@@ -27,7 +27,9 @@
       "patch": "./cordis.patch.yml"
     },
     "client": {
-      "inject": ["@deepseek-ai/dsh-client-locale"],
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ],
       "platform": "web"
     }
   },
@@ -62,7 +64,5 @@
   "engines": {
     "node": ">=20"
   },
-  "publishConfig": {
-    "access": "public"
-  }
+  "private": true
 }

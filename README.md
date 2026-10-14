@@ -56,7 +56,16 @@ node tools/install.mjs --uninstall
 
 ### 別の方法（バンドルとして入れる）
 
-このパッケージは DSH の bundle 定義（`dsh.bundle.patch`）も同梱しているので、プロファイルの `package.json` に依存として追加し、`dsh.profile.bundles` に `dsh-locale-ja` を加えても同じ行が組み込まれます（`dsh plugin --profile <name> add ...` や、アプリの Plugins ページから入れる場合はこちら）。`tools/install.mjs` は依存として入っていることを検出すると、行の二重挿入を避けるために何もしません。
+このパッケージは DSH の bundle 定義（`dsh.bundle.patch`）も同梱しているので、pnpm の依存として入れて `dsh.profile.bundles` に加える方法でも同じ行が組み込まれます。
+
+```sh
+dsh plugin --profile web add "git+https://github.com/yuuturn/dsh-locale-ja"
+# その後、プロファイルの package.json の dsh.profile.bundles に "dsh-locale-ja" を追加
+```
+
+`tools/install.mjs` は、依存として入っていることを検出すると行の二重挿入を避けるために何もしません。
+
+> **このパッケージは npm に公開していません。** npm レジストリの `dsh-locale-ja` は別プロジェクト（gepeiyu 氏）の同名パッケージで、本リポジトリとは無関係です。`npm install dsh-locale-ja` ではこのパッケージは入りません。
 
 ## 日本語フォント
 
@@ -109,6 +118,20 @@ npm test          # build --check + verify + インストーラの往復 + 実�
 `npm test` の結合テストは、インストール済み DSH の `app.asar` から**本物のロケールサービス**を読み込み、「日本語」が選択肢に出ること、行の操作で実際に切り替わること、`<html lang>` とフォント上書きが有効になることを確認します。DSH が無い環境では自動的に skip します（`DSH_APP_ASAR` で場所を指定できます）。
 
 翻訳の分担は `tools/translate-groups.json` に、辞書の抽出は `tools/extract-dicts.py` にあります。プルリクエストは歓迎します。DSH 側の英文が変わっている場合は `npm run refresh-reference` の結果も添えてください。
+
+## 他の日本語パックとの関係
+
+同じ目的（DSH Web UI の日本語化）の実装が他にも公開されています。どれを使うか選ぶときの参考にしてください。仕組み（公式の `ctx.locale.addLanguage()` と名前空間辞書）はどれも同じで、違いは翻訳の基準にした DSH の版、収録量、フォントの扱い、インストール経路です。
+
+| | 本リポジトリ | [fang2hou/dsh-locale-ja](https://github.com/fang2hou/dsh-locale-ja) | [gepeiyu/dsh-locale-ja](https://github.com/gepeiyu/dsh-locale-ja) |
+| --- | --- | --- | --- |
+| 翻訳の基準 | DSH `0.2.0-rc.2` | DSH `0.1.5-rc.2` | DSH `0.2.1-alpha.2` |
+| 収録量 | 57 名前空間 / 2,433 キー | 42 / 1,257 | 62 / 2,773 |
+| 日本語フォント | Noto Sans JP を優先（無ければ OS の日本語フォント） | OS 標準の日本語フォント | 言及なし |
+| デスクトップアプリ | 対応（`tools/install.mjs`） | 記載なし（`--profile web` の CLI 手順） | 記載なし（同左） |
+| 配布 | GitHub（npm 未公開） | npm `@fang2hou/dsh-locale-ja` | npm `dsh-locale-ja` |
+
+本リポジトリの特徴は、**お使いの DSH 版（`0.2.0-rc.2`）の辞書を全数収録していること**、**デスクトップアプリのプロファイルに組み込めること**、**Noto Sans JP を明示的に指定できること**、そして**実アプリのロケールサービスに対する結合テストを CI で回していること**です。翻訳の網羅性や更新頻度で他実装に劣る場合は、無理に併用せず、そちらを使うか差分を還元することをおすすめします。
 
 ## 既知の制約
 
