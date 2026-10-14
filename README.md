@@ -17,6 +17,20 @@ English: [README.en.md](README.en.md)
 | フォント | Noto Sans JP（任意。無い場合は OS の日本語フォントにフォールバック） |
 | OS | macOS / Windows / Linux（DSH のデスクトップアプリ、または CLI の web プロファイル） |
 
+## 対応サーフェス
+
+デスクトップアプリの画面は、`dsh web` が配信するのと**同じ Web UI**（`@deepseek-ai/dsh-web-app` + `@deepseek-ai/dsh-web-frontend`）です。プロファイル構成も両者とも `@deepseek-ai/dsh-base` + `@deepseek-ai/dsh-web-app` で同じで、デスクトップアプリはそれを Electron 上で表示し、ネイティブのディレクトリ選択（`dsh-host-directory-picker-native`）やアップデート UI などを追加プラグインとして足しているだけです。UI 自体は別実装ではありません。
+
+したがってこの言語パックは**デスクトップ専用ではなく**、Web サーフェスを持つプロファイルで共通に使えます。
+
+| 使い方 | プロファイル | 組み込み方 |
+| --- | --- | --- |
+| デスクトップアプリ | `desktop` | `node tools/install.mjs`（このプロファイルは Electron が排他的に管理するため、`dsh plugin` などの CLI からは操作できません） |
+| `dsh web`（CLI） | `web` | `node tools/install.mjs --profile web`、または pnpm の依存 + `dsh.profile.bundles` |
+| その他の Web サーフェス | 任意 | 同上（`@deepseek-ai/dsh-client-locale` を含む構成であること） |
+
+デスクトップ固有の文言（`settings.desktop.update.*` など）も辞書に含めています。
+
 ## インストール
 
 ```sh

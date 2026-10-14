@@ -17,6 +17,20 @@ Japanese: [README.md](README.md)
 | Font | Noto Sans JP (optional; falls back to the OS Japanese fonts) |
 | OS | macOS / Windows / Linux (the DSH desktop app, or a CLI `web` profile) |
 
+## Supported surfaces
+
+The desktop app renders the **same web UI** that `dsh web` serves (`@deepseek-ai/dsh-web-app` plus `@deepseek-ai/dsh-web-frontend`). Both profiles compose the same bundles (`@deepseek-ai/dsh-base` + `@deepseek-ai/dsh-web-app`); the desktop app simply hosts that UI in Electron and adds native capabilities as extra plugins (the native directory picker, the update UI, and so on). The UI itself is not a separate implementation.
+
+So this pack is **not desktop-only** — it works on any profile with the web surface.
+
+| How you run DSH | Profile | How to install |
+| --- | --- | --- |
+| Desktop app | `desktop` | `node tools/install.mjs` (this profile is managed exclusively by the Electron application, so `dsh plugin` and friends cannot touch it) |
+| `dsh web` (CLI) | `web` | `node tools/install.mjs --profile web`, or a pnpm dependency plus `dsh.profile.bundles` |
+| Any other web surface | any | Same as above, as long as the profile includes `@deepseek-ai/dsh-client-locale` |
+
+Desktop-only copy such as `settings.desktop.update.*` is translated too.
+
 ## Install
 
 ```sh
