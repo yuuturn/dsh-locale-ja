@@ -2,6 +2,11 @@
   "brokenBadge": "読み込みに失敗",
   "builtInGroup": "組み込み",
   "close": "閉じる",
+  "createPlugin": "エージェントにプラグインを作成させる",
+  "createPluginChecking": "クリエイターモードが利用可能か確認中",
+  "createPluginDescription": "クリエイターモードに入り、独自のDSHプラグインを作成します",
+  "createPluginMissing": "この構成にはクリエイターモードが含まれていません",
+  "createPluginUnavailable": "一時的に利用できません。このメニューを開き直して再試行してください",
   "creatorDraft": "エージェントにプリセットの作成を手伝ってもらう",
   "customGroup": "カスタム",
   "headerHint": "このタスクの開始時に選択されたエージェントプリセット",
@@ -19,6 +24,7 @@
   "seatHint": "新しいタスクで使用するエージェントプリセットを選択",
   "sectionIntro": "エージェントが使うツールと動作方法を選択します。日常的なタスクには標準モード、DSHの機能を拡張するにはクリエイターモードを使用してください",
   "setDefault": "新規タスクのデフォルトに設定",
+  "standardUnavailable": "標準モードを利用できません。復元するか、利用可能な別のモードを選択してください",
   "switchRefused": "{name}に切り替えられませんでした：{reason}",
   "view": "構成を表示"
 }

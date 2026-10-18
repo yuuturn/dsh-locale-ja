@@ -27,6 +27,7 @@
   "status.stopping": "停止中",
   "terminal.collapse": "折りたたむ",
   "terminal.collapseAria": "出力を折りたたむ",
+  "terminal.commandLine": "コマンド行{n}",
   "terminal.copied": "コピーしました",
   "terminal.copy": "コピー",
   "terminal.done": "完了",

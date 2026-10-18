@@ -5,7 +5,10 @@
   "apiKeyUnset": "キーが設定されていません。DeepSeekアカウントのモデルを使用する会話のみ、デフォルトのエンドポイント経由で検索できます",
   "baseUrl": "エンドポイント",
   "baseUrlHint": "空欄の場合はプロバイダーのデフォルトが使用されます",
+  "count": "検索ごとの結果数",
+  "countHint": "クエリごとに返す結果の件数です。1〜50の整数で、既定は10です。これは検索回数ではなく結果の件数を制御します。web_searchが保持するソース数は、それ自体の結果上限を超えません",
   "description": "DeepSeekの検索プロバイダーを設定します",
+  "invalidCount": "1〜50の整数を入力するか、空欄のままにしてデフォルトを使用してください",
   "invalidNumber": "数値を入力してください。空欄の場合はデフォルト値が使用されます",
   "maxUses": "1リクエストあたりの最大検索回数",
   "maxUsesHint": "1回のリクエストが回答するまでに検索できる最大回数です",
@@ -15,6 +18,12 @@
   "save": "保存",
   "saveFailed": "このデプロイはこれらの値を受け付けませんでした。修正できるようそのまま残しています",
   "saving": "保存中…",
+  "searchApiBaseUrl": "Search / Fetch APIのベースURL",
+  "searchApiBaseUrlHint": "https://api.deepseek.com/v1/toolsのようにAPIプレフィックスを含めてください。プロバイダーが/searchまたは/fetchを付加します。空欄の場合はデフォルトに戻ります",
+  "searchGuide": "検索と取得のガイド",
+  "searchGuideUrl": "https://api-docs.deepseek.com/guides/search",
   "title": "Web検索",
-  "unavailable": "このプラグインは読み込まれていないため、現在は設定できません"
+  "unavailable": "このプラグインは読み込まれていないため、現在は設定できません",
+  "useSearchApi": "新しいWeb検索APIを使用",
+  "useSearchApiHint": "既定ではオフで、検索はDeepSeek Messages経由で実行されます。新しいWeb検索APIの機能と料金については "
 }

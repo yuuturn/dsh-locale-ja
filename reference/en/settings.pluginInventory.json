@@ -7,7 +7,6 @@
   "condition": "Disabled when",
   "conditionalTag": "Conditional",
   "configuration": "Configuration",
-  "countUnit": "plugins",
   "disabledTag": "Disabled",
   "empty": "No plugins are available.",
   "emptySearch": "No matching plugins.",
@@ -15,7 +14,6 @@
   "enabledTag": "Enabled",
   "error": "Plugins are temporarily unavailable.",
   "failed": "Failed to start",
-  "failedCountLabel": "failed",
   "failedTag": "Failed",
   "fromPreset": "From",
   "globalSubtitle": "Shared by the system and every session",
@@ -38,8 +36,7 @@
   "switcherLabel": "Choose the agent preset to inspect",
   "tab": "Plugin list",
   "unloading": "Unloading",
-  "unobserved": "Not running",
-  "viewInPreset": "View in the preset group"
+  "unobserved": "Not running"
  },
  "zh": {
   "active": "运行中",
@@ -49,7 +46,6 @@
   "condition": "禁用条件",
   "conditionalTag": "条件启用",
   "configuration": "配置状态",
-  "countUnit": "个",
   "disabledTag": "已停用",
   "empty": "暂无插件。",
   "emptySearch": "没有匹配的插件。",
@@ -57,7 +53,6 @@
   "enabledTag": "已启用",
   "error": "暂时无法读取插件。",
   "failed": "启动失败",
-  "failedCountLabel": "个失败",
   "failedTag": "启动失败",
   "fromPreset": "来自",
   "globalSubtitle": "系统与所有会话共用",
@@ -80,7 +75,6 @@
   "switcherLabel": "选择要查看的 Agent 预设",
   "tab": "插件列表",
   "unloading": "卸载中",
-  "unobserved": "未运行",
-  "viewInPreset": "去预设分组查看"
+  "unobserved": "未运行"
  }
 }
