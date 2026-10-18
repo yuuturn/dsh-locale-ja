@@ -4,7 +4,10 @@
  *
  * Why this is needed: the shipped theme (`@deepseek-ai/dsh-client-ui-theme`)
  * declares its font variables with Simplified-Chinese CJK families ahead of any
- * Japanese family, so Japanese text is drawn with Chinese glyph shapes:
+ * Japanese family, so Japanese text is drawn with Chinese glyph shapes.
+ *
+ * Up to DSH 0.2.0 the theme declared the public aliases directly, so overriding
+ * them was enough:
  *
  *   :root {
  *     --dsw-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -12,6 +15,36 @@
  *     --ds-font-family-code: "SF Mono", "JetBrains Mono", ..., "PingFang SC",
  *       "Microsoft YaHei";
  *   }
+ *
+ * DSH 0.2.1 moved the raw stacks behind a layer of indirection and re-derives
+ * the aliases on `body` from the user's configured font lists:
+ *
+ *   :root {
+ *     --dsh-font-family-text-default: -apple-system, ..., "PingFang SC", ...;
+ *     --dsh-font-family-code-default: "SF Mono", ..., "PingFang SC", ...;
+ *     --dsw-font-family: var(--dsh-font-family-text-default);
+ *     --ds-font-family-code: var(--dsh-font-family-code-default);
+ *   }
+ *   body {
+ *     --dsw-font-family:
+ *       var(--dsh-font-family-text, var(--dsh-font-family-text-default)),
+ *       var(--dsh-font-family-text-default);
+ *     --ds-font-family-code:
+ *       var(--dsh-font-family-code, var(--dsh-font-family-code-default)),
+ *       var(--dsh-font-family-code-default);
+ *   }
+ *
+ * Because `body` declares the aliases itself, an `html:lang(ja)` override of
+ * `--dsw-font-family` no longer reaches the body subtree — the inherited value
+ * is shadowed by `body`'s own declaration, so Japanese kept falling back to
+ * "PingFang SC". The override therefore replaces the `*-default` stacks, which
+ * are what the `body` formula falls back to. A font the user configures in
+ * Settings renders first via `--dsh-font-family-text` / `--dsh-font-family-code`
+ * (written by the layout theme presenter), and only then falls through to the
+ * Japanese stack for CJK glyphs — so a custom font is still honoured.
+ *
+ * The legacy aliases are overridden too, for DSH builds whose `:root` declared
+ * the stacks directly.
  *
  * The locale service keeps `<html lang>` in step with the active locale
  * ("ja" for this pack, "zh-CN" for the shipped Chinese locale), so scoping the
@@ -24,6 +57,15 @@
  */
 
 html:lang(ja) {
+  --dsh-font-family-text-default:
+    -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans JP", "Noto Sans CJK JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Yu Gothic UI", "Yu Gothic", Meiryo,
+    "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  --dsh-font-family-code-default:
+    "SF Mono", "JetBrains Mono", "Fira Code", Consolas, "Liberation Mono", Menlo, Courier,
+    "Noto Sans JP", "Noto Sans CJK JP", "Hiragino Sans", "Yu Gothic UI", Meiryo,
+    monospace !important;
   --dsw-font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Noto Sans JP", "Noto Sans CJK JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN",

@@ -13,8 +13,8 @@
  },
  {
   "namespace": "chat",
-  "en": 186,
-  "zh": 186,
+  "en": 191,
+  "zh": 191,
   "file": "chat.json"
  },
  {
@@ -31,8 +31,8 @@
  },
  {
   "namespace": "conversation",
-  "en": 369,
-  "zh": 369,
+  "en": 373,
+  "zh": 373,
   "file": "conversation.json"
  },
  {
@@ -40,6 +40,18 @@
   "en": 51,
   "zh": 51,
   "file": "cordis.json"
+ },
+ {
+  "namespace": "cotTranslation",
+  "en": 32,
+  "zh": 32,
+  "file": "cotTranslation.json"
+ },
+ {
+  "namespace": "deepseek-model-label-1017",
+  "en": 1,
+  "zh": 1,
+  "file": "deepseek-model-label-1017.json"
  },
  {
   "namespace": "deliverables",
@@ -73,8 +85,8 @@
  },
  {
   "namespace": "job",
-  "en": 39,
-  "zh": 39,
+  "en": 40,
+  "zh": 40,
   "file": "job.json"
  },
  {
@@ -103,9 +115,15 @@
  },
  {
   "namespace": "pluginManager",
-  "en": 189,
-  "zh": 189,
+  "en": 221,
+  "zh": 221,
   "file": "pluginManager.json"
+ },
+ {
+  "namespace": "pluginMarket",
+  "en": 78,
+  "zh": 78,
+  "file": "pluginMarket.json"
  },
  {
   "namespace": "question",
@@ -115,8 +133,8 @@
  },
  {
   "namespace": "reference",
-  "en": 11,
-  "zh": 11,
+  "en": 15,
+  "zh": 15,
   "file": "reference.json"
  },
  {
@@ -127,9 +145,21 @@
  },
  {
   "namespace": "schedule.manager",
-  "en": 133,
-  "zh": 133,
+  "en": 134,
+  "zh": 134,
   "file": "schedule.manager.json"
+ },
+ {
+  "namespace": "secretMask",
+  "en": 2,
+  "zh": 2,
+  "file": "secretMask.json"
+ },
+ {
+  "namespace": "session-inspector",
+  "en": 52,
+  "zh": 52,
+  "file": "session-inspector.json"
  },
  {
   "namespace": "session-log-download",
@@ -139,14 +169,14 @@
  },
  {
   "namespace": "settings",
-  "en": 34,
-  "zh": 34,
+  "en": 41,
+  "zh": 41,
   "file": "settings.json"
  },
  {
   "namespace": "settings.account",
-  "en": 93,
-  "zh": 54,
+  "en": 94,
+  "zh": 55,
   "file": "settings.account.json"
  },
  {
@@ -157,8 +187,8 @@
  },
  {
   "namespace": "settings.agentPreset",
-  "en": 22,
-  "zh": 22,
+  "en": 28,
+  "zh": 28,
   "file": "settings.agentPreset.json"
  },
  {
@@ -169,8 +199,8 @@
  },
  {
   "namespace": "settings.models",
-  "en": 113,
-  "zh": 113,
+  "en": 134,
+  "zh": 134,
   "file": "settings.models.json"
  },
  {
@@ -181,8 +211,8 @@
  },
  {
   "namespace": "settings.pluginInventory",
-  "en": 40,
-  "zh": 40,
+  "en": 37,
+  "zh": 37,
   "file": "settings.pluginInventory.json"
  },
  {
@@ -211,14 +241,14 @@
  },
  {
   "namespace": "settings.theme",
-  "en": 9,
-  "zh": 9,
+  "en": 25,
+  "zh": 25,
   "file": "settings.theme.json"
  },
  {
   "namespace": "settings.webSearch",
-  "en": 18,
-  "zh": 18,
+  "en": 27,
+  "zh": 27,
   "file": "settings.webSearch.json"
  },
  {
@@ -313,8 +343,8 @@
  },
  {
   "namespace": "subagent",
-  "en": 39,
-  "zh": 39,
+  "en": 41,
+  "zh": 41,
   "file": "subagent.json"
  },
  {
@@ -325,8 +355,8 @@
  },
  {
   "namespace": "voice-input",
-  "en": 101,
-  "zh": 101,
+  "en": 109,
+  "zh": 109,
   "file": "voice-input.json"
  },
  {
@@ -337,8 +367,8 @@
  },
  {
   "namespace": "workspace",
-  "en": 112,
-  "zh": 112,
+  "en": 119,
+  "zh": 119,
   "file": "workspace.json"
  }
 ]

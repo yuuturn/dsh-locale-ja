@@ -2,6 +2,10 @@
  "en": {
   "candidate.noCwd": "(no cwd)",
   "crumb.root": "Workspace",
+  "fileOpen.close": "Close",
+  "fileOpen.failed": "Couldn’t open “{path}”. Try again or close this message.",
+  "fileOpen.retry": "Retry",
+  "fileOpen.title": "Couldn’t open file",
   "section.files": "Files & folders",
   "section.sessions": "Sessions",
   "section.subagents": "Subagents",
@@ -15,6 +19,10 @@
  "zh": {
   "candidate.noCwd": "（无工作目录）",
   "crumb.root": "工作区",
+  "fileOpen.close": "关闭",
+  "fileOpen.failed": "无法打开“{path}”，请重试或关闭此提示",
+  "fileOpen.retry": "重试",
+  "fileOpen.title": "无法打开文件",
   "section.files": "文件与文件夹",
   "section.sessions": "对话",
   "section.subagents": "子智能体",

@@ -30,7 +30,7 @@
   "command.label": "模型",
   "effort.providerDefault": "Default",
   "empty.efforts": "当前模型未提供推理等级。",
-  "empty.models": "没有可用的模型。",
+  "empty.models": "暂无可用模型",
   "error.action": "模型操作失败：{message}",
   "error.sessionInUse": "当前会话已被占用，可能是其他正在运行的 DSH 导致的（如其他 dsh web、桌面端），请退出其他正在运行的 DSH 后重试。",
   "menu.aria": "模型与推理等级",

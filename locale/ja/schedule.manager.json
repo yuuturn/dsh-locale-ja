@@ -120,6 +120,7 @@
   "timing.notFuture": "未来の日時を選択してください",
   "timing.prevMonth": "前月",
   "timing.second": "秒",
+  "timing.subagentSession": "このセッションはサブエージェントに属しているため、配信されるリマインダーを一切受け取りません",
   "timing.time": "時刻",
   "timing.unit.hour": "時間",
   "timing.unit.minute": "分",

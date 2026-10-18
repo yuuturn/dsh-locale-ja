@@ -4,7 +4,7 @@ A Japanese (`ja`) UI locale and font pack for the [DSH (DeepSeek Harness)](https
 
 Japanese: [README.md](README.md)
 
-- **Japanese UI** — adds **日本語** to Settings → General → Language and translates the interface. All **57 namespaces / 2433 keys** present in DSH `0.2.0-rc.2` are translated; anything untranslated falls back to English.
+- **Japanese UI** — adds **日本語** to Settings → General → Language and translates the interface. All **62 namespaces / 2719 keys** present in DSH `0.2.1-rc.2` are translated; anything untranslated falls back to English.
 - **Japanese font** — while Japanese is selected, the UI uses **Noto Sans JP** (or Hiragino Sans / Yu Gothic UI when it is not installed). The theme DSH ships puts the Simplified-Chinese family `PingFang SC` ahead of any Japanese family, so without this override Japanese text is drawn with Chinese glyph shapes.
 - **Leaves the built-in locales alone** — `ja` is registered as an external language, so the shipped English and Chinese UIs are untouched.
 
@@ -12,7 +12,7 @@ Japanese: [README.md](README.md)
 
 | Item | Requirement |
 | --- | --- |
-| DSH | `0.2.0-rc.2` (uses the `@deepseek-ai/dsh-client-locale` language-pack API) |
+| DSH | `0.2.1-rc.2` (uses the `@deepseek-ai/dsh-client-locale` language-pack API) |
 | Node.js | 20 or newer (for the install script and the build) |
 | Font | Noto Sans JP (optional; falls back to the OS Japanese fonts) |
 | OS | macOS / Windows / Linux (the DSH desktop app, or a CLI `web` profile) |
@@ -139,19 +139,19 @@ Other implementations of the same idea (a Japanese UI for the DSH web GUI) are p
 
 | | This repository | [fang2hou/dsh-locale-ja](https://github.com/fang2hou/dsh-locale-ja) | [gepeiyu/dsh-locale-ja](https://github.com/gepeiyu/dsh-locale-ja) |
 | --- | --- | --- | --- |
-| Translated from | DSH `0.2.0-rc.2` | DSH `0.1.5-rc.2` | DSH `0.2.1-alpha.2` |
-| Coverage | 57 namespaces / 2,433 keys | 42 / 1,257 | 62 / 2,773 |
+| Translated from | DSH `0.2.1-rc.2` | DSH `0.1.5-rc.2` | DSH `0.2.1-alpha.2` |
+| Coverage | 62 namespaces / 2,719 keys | 42 / 1,257 | 62 / 2,773 |
 | Japanese font | Prefers Noto Sans JP, falls back to OS Japanese fonts | OS Japanese system fonts | Not mentioned |
 | Desktop app | Supported (`tools/install.mjs`) | Not documented (CLI `--profile web`) | Not documented (same) |
 | Distribution | GitHub (not on npm) | npm `@fang2hou/dsh-locale-ja` | npm `dsh-locale-ja` |
 
-What sets this repository apart: it covers **every namespace shipped with the DSH release you are running (`0.2.0-rc.2`)**, it can **install into the desktop app's profile**, it **names Noto Sans JP explicitly**, and it runs an **integration test against the real locale service in CI**. If another pack beats it on coverage or update cadence, prefer that one, or send the difference upstream rather than running both.
+What sets this repository apart: it covers **every namespace shipped with the DSH release you are running (`0.2.1-rc.2`)**, it can **install into the desktop app's profile**, it **names Noto Sans JP explicitly**, and it runs an **integration test against the real locale service in CI**. If another pack beats it on coverage or update cadence, prefer that one, or send the difference upstream rather than running both.
 
 ## Known limitations
 
 - **`command.token.*` stays English.** Those values are not display copy: the slash menu inserts them as the *input spelling* of the picked command, and the alias table that resolves a typed spelling is built from DSH's shipped `zh` and `en` dictionaries only (an external locale's spelling is never registered). Translating them would make the inserted spelling unresolvable.
 - Text captured at registration time outside the slot render path (for example the `/model` command description in the command registry) keeps the language it was registered under; that is a DSH-side behavior.
-- The translation targets the DSH `0.2.0-rc.2` dictionaries. DSH is a release candidate, so keys may be added or removed upstream; `npm test` reports that.
+- The translation targets the DSH `0.2.1-rc.2` dictionaries. DSH is a release candidate, so keys may be added or removed upstream; `npm test` reports that.
 - **日本語** in the language selector is an external language contributed by this package, and selecting it sets `<html lang>` to `ja`.
 
 ## License

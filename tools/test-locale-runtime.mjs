@@ -235,6 +235,28 @@ check(
   (fontStyle?.textContent ?? '').includes('PingFang SC') === false,
   'the Chinese CJK fallbacks are gone from the ja stack',
 )
+
+// DSH 0.2.1 moved the raw stacks to `--dsh-font-family-{text,code}-default` and
+// re-derives the public aliases on `body` (so a `:lang(ja)` override of the
+// aliases is shadowed for the body subtree). Guard against the regression where
+// the pack keeps overriding only the aliases and Japanese reverts to PingFang.
+const themeSource = (() => {
+  try {
+    return readAsarMember(asarPath, 'dsh/node_modules/@deepseek-ai/dsh-client-ui-theme/lib/client.js')
+  } catch {
+    return ''
+  }
+})()
+if (themeSource.includes('--dsh-font-family-text-default')) {
+  for (const variable of ['--dsh-font-family-text-default', '--dsh-font-family-code-default']) {
+    check(
+      fontStyle?.textContent.includes(variable) === true,
+      `the override replaces the theme's ${variable} stack`,
+    )
+  }
+} else if (themeSource.length > 0) {
+  console.log('skip: the installed theme does not layer the font stacks behind --dsh-font-family-*-default')
+}
 check(injected().length === 1, `exactly one font stylesheet among ${styles.length} client stylesheets`)
 
 // Re-running the injection (HMR, a second activation) must not duplicate the tag.
